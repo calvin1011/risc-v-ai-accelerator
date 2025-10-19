@@ -34,18 +34,17 @@ sudo apt install -y build-essential git curl wget vim tree autoconf automake \
 ```
 
 ### RISC-V GNU Toolchain
-[To be documented during installation]
+
 
 ### Spike ISA Simulator
-[To be documented during installation]
+
 
 ### DRAMsim3
-[To be documented during installation]
+
 
 ---
 
 ## Issues Encountered
-[Document any problems and solutions here]
+
 
 ## Version Information
-[Add tool versions after installation]
