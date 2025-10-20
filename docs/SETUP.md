@@ -8,7 +8,23 @@
 
 ## Installation Log
 
-### Date: October 19, 2025
+### RISC-V GNU Toolchain - INSTALLED
+**Installation Date:** October 19, 2025
+**Method:** Pre-built Ubuntu package
+**Version:** riscv64-unknown-elf-gcc 13.2.0
+
+**Installation Command:**
+```bash
+sudo apt install -y gcc-riscv64-unknown-elf
+```
+
+**Verification:**
+```bash
+riscv64-unknown-elf-gcc --version
+# Output: riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+```
+
+**Status:** Successfully installed and verified
 
 #### Tools To Install:
 - [ ] RISC-V GNU Toolchain
