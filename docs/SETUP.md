@@ -49,18 +49,44 @@ sudo apt install -y build-essential git curl wget vim tree autoconf automake \
     texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build cmake
 ```
 
-### RISC-V GNU Toolchain
+### DRAMsim3 Memory Simulator - INSTALLED
+**Installation Date:** October 26, 2025
+**Build Time:** ~3 minutes
+**Location:** ~/riscv-tools/DRAMsim3/build/
 
+**Build Commands:**
+```bash
+cd ~/riscv-tools
+git clone https://github.com/umd-memsys/DRAMsim3.git
+cd DRAMsim3
+mkdir build && cd build
+cmake ..
+make -j$(nproc)
+```
 
-### Spike ISA Simulator
+**Verification:**
+```bash
+./dramsim3main --help
+# Successfully displays help menu
+```
 
-
-### DRAMsim3
+**Status:** Built and verified successfully
 
 
 ---
 
 ## Issues Encountered
+### RISC-V Proxy Kernel (pk) - SKIPPED
+**Status:** Not available as pre-built package, build from source failed
+**Reason:** pk has cross-compilation issues with the Ubuntu toolchain
+**Impact:** Will use bare-metal RISC-V code or custom startup code instead
+**Alternative:** Can write custom initialization code for MNIST workload
+
+### TC-100 Test Results
+**Test:** Compiled simple RISC-V assembly program
+**File Type:** ELF 64-bit RISC-V executable
+**Compilation:** SUCCESS
+**Spike Loading:** Requires pk (unavailable), but compilation proves toolchain works
 
 
 ## Version Information
