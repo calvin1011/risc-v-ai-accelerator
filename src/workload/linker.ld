@@ -10,18 +10,16 @@ MEMORY
 
 SECTIONS
 {
-  /* Place the executable code in the 'ram' region */
+  . = 0x80000000;
+  
   .text : {
+    *(.text.init)     
     *(.text .text.*)
   } > ram
-
-  /* Place other sections after the code */
+  
   .rodata : { *(.rodata .rodata.*) } > ram
   .data : { *(.data .data.*) } > ram
-  
-  /* Place the giant neural network global variable here */
   .bss : { *(.bss .bss.*) } > ram
-
-  /* Define a symbol that points to the top of our RAM for the stack */
+  
   _stack_top = ORIGIN(ram) + LENGTH(ram);
 }
