@@ -4,9 +4,9 @@
 #include <stdint.h>
 
 // Network architecture
-#define INPUT_SIZE 784      // 28x28 pixels
-#define HIDDEN_SIZE 128     // Hidden layer neurons
-#define OUTPUT_SIZE 10      // 10 digit classes (0-9)
+#define INPUT_SIZE 28       // Changed from 784
+#define HIDDEN_SIZE 8       // Changed from 128  
+#define OUTPUT_SIZE 10
 
 // Neural network structure
 typedef struct {

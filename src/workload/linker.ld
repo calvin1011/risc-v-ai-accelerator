@@ -19,6 +19,11 @@ SECTIONS
   
   .rodata : { *(.rodata .rodata.*) } > ram
   .data : { *(.data .data.*) } > ram
+  
+  .tohost : {
+    *(.tohost)
+  } > ram
+  
   .bss : { *(.bss .bss.*) } > ram
   
   _stack_top = ORIGIN(ram) + LENGTH(ram);
